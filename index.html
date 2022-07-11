@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<canvas id="myCanvas" style="border: 1px solid black"></canvas>
+
+<script>
+    class Rectangle{
+        width;
+        height;
+    constructor(width,height) {
+        this.width = width ;
+        this.height = height ;
+    }
+    getWidth() {
+        return this.width ;
+    }
+    setWidth(width){
+        this.width = width;
+    }
+    getHeight(){
+        return this.height;
+    }
+    setHeight(height){
+        this.height = height;
+    }
+    getChuvi(){
+   return (this.width + this.height) *2
+    }
+    getDienTich(){
+        return(this.width *this.height)
+    }
+    veHinhChuNhat(){
+        let canvas = document.getElementById('myCanvas');
+        let ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = 'grren'
+        ctx.fillRect(0,0,this.width,this.height)
+    }
+    }
+
+    let rec = new Rectangle(200,120)
+    rec.veHinhChuNhat()
+document.write('<br>' +'dien tich =' +rec.getDienTich() + '<br>' +'chu vi =' + rec.getChuvi())
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
